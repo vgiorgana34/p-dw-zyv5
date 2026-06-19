@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta · Dr. Rodrigo Witehead — Medicina Biológica · Aigenci</title>
+<meta name="description" content="Sistema de captación de pacientes para los consultorios de Medicina Biológica del Dr. Rodrigo Witehead en Puebla y Tehuacán. Propuesta de Aigenci.">
+<meta name="author" content="Víctor Giorgana · Aigenci">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Propuesta · Dr. Rodrigo Witehead — Medicina Biológica · Aigenci">
+<meta property="og:description" content="Sistema de captación de pacientes para los consultorios de Medicina Biológica del Dr. Rodrigo Witehead en Puebla y Tehuacán.">
+<meta property="og:image" content="https://aigenci.sirv.com/AIGENCI/Imagen%20Aigenci%20-%20Open%20Graph.jpg">
+<meta property="og:url" content="https://aigenci.mx">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Propuesta · Dr. Rodrigo Witehead — Medicina Biológica · Aigenci">
+<meta name="twitter:description" content="Sistema de captación de pacientes para los consultorios de Medicina Biológica del Dr. Rodrigo Witehead en Puebla y Tehuacán.">
+<meta name="twitter:image" content="https://aigenci.sirv.com/AIGENCI/Imagen%20Aigenci%20-%20Open%20Graph.jpg">
+<link rel="icon" type="image/png" href="assets/logo-aigenci.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;family=DM+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:84px;scroll-behavior:smooth;}
+  body{margin:0;background:#F6F4FF;color:#4a3d58;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  ::selection{background:rgba(111,76,158,0.22);}
+  @keyframes aig-spin{to{transform:rotate(360deg);}}
+  @keyframes aig-pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.3;transform:scale(.6);}}
+  @keyframes aig-floatY{0%,100%{transform:translateY(0) rotate(var(--r,0deg));}50%{transform:translateY(-14px) rotate(var(--r,0deg));}}
+  @keyframes aig-floatX{0%,100%{transform:translateX(0) rotate(var(--r,0deg));}50%{transform:translateX(14px) rotate(var(--r,0deg));}}
+  .aig-sticker{position:absolute;pointer-events:none;z-index:2;}
+  .sec-toggle:hover .sec-title{color:#6F4C9E;}
+  .sec-toggle:hover .chev{background:#EEECFF;}
+  .sec-toggle:hover .chev svg{stroke:#FD327B;}
+  .sec-toggle:focus-visible{outline:2px solid #FD327B;outline-offset:6px;border-radius:8px;}
+  @media (max-width:760px){.nav-pills{display:none !important;} .two-col{flex-direction:column !important;} .kpi-grid,.eje-grid,.pulse-strip,.pro-row{grid-template-columns:1fr !important;flex-direction:column !important;}}
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
+</style>
+</head>
+<body>
+
+<div id="report" style="position:relative;overflow-x:hidden;">
+
+  <nav style="position:sticky;top:0;z-index:50;height:64px;background:rgba(46,35,64,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div style="max-width:980px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+      <div style="display:flex;align-items:center;gap:12px;min-width:0;">
+        <div style="width:36px;height:36px;border-radius:9999px;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;"><img src="assets/logo-whitehead.png" alt="Dr. Whitehead" style="width:30px;height:auto;display:block;"></div>
+        <div style="line-height:1.1;min-width:0;">
+          <div style="font-family:'Outfit';font-weight:800;font-size:14px;color:#fff;white-space:nowrap;">Dr. Rodrigo Witehead</div>
+          <div style="font-family:'JetBrains Mono';font-size:9.5px;font-weight:600;letter-spacing:0.14em;color:#5FCFFA;text-transform:uppercase;">Propuesta · Aigenci</div>
+        </div>
+      </div>
+      <div class="nav-pills" style="display:flex;align-items:center;gap:7px;">
+        <button data-nav="s1" style="width:30px;height:30px;border-radius:9999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);font-family:'JetBrains Mono';font-size:12px;font-weight:600;cursor:pointer;transition:all .22s;">1</button>
+        <button data-nav="s2" style="width:30px;height:30px;border-radius:9999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);font-family:'JetBrains Mono';font-size:12px;font-weight:600;cursor:pointer;transition:all .22s;">2</button>
+        <button data-nav="s3" style="width:30px;height:30px;border-radius:9999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);font-family:'JetBrains Mono';font-size:12px;font-weight:600;cursor:pointer;transition:all .22s;">3</button>
+        <button data-nav="s4" style="width:30px;height:30px;border-radius:9999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);font-family:'JetBrains Mono';font-size:12px;font-weight:600;cursor:pointer;transition:all .22s;">4</button>
+        <button data-nav="s5" style="width:30px;height:30px;border-radius:9999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);font-family:'JetBrains Mono';font-size:12px;font-weight:600;cursor:pointer;transition:all .22s;">5</button>
+        <button data-nav="s6" style="width:30px;height:30px;border-radius:9999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);font-family:'JetBrains Mono';font-size:12px;font-weight:600;cursor:pointer;transition:all .22s;">6</button>
+        <button data-nav="s7" style="width:30px;height:30px;border-radius:9999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.7);font-family:'JetBrains Mono';font-size:12px;font-weight:600;cursor:pointer;transition:all .22s;">7</button>
+      </div>
+    </div>
+  </nav>
+
+  <header style="position:relative;background:#2E2340;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(620px 320px at 12% 18%,rgba(111,76,158,0.55),transparent 70%),radial-gradient(460px 320px at 92% 78%,rgba(253,50,123,0.16),transparent 70%);pointer-events:none;"></div>
+    <div style="position:relative;max-width:980px;margin:0 auto;padding:72px 24px 0;">
+      <div class="two-col" style="display:flex;align-items:center;gap:48px;justify-content:space-between;">
+        <div style="flex:1 1 auto;min-width:0;">
+          <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#5FCFFA;margin-bottom:22px;"><span style="width:8px;height:8px;border-radius:9999px;background:#FD327B;box-shadow:0 0 12px 2px rgba(253,50,123,0.7);"></span>Propuesta de servicios · Aigenci</div>
+          <h1 style="font-family:'Outfit';font-weight:900;font-size:clamp(40px,7vw,68px);line-height:1.0;letter-spacing:-0.03em;color:#fff;margin:0 0 18px;">Dr. Rodrigo<br><em style="font-style:normal;color:#FD327B;">Witehead</em></h1>
+          <p style="font-size:18px;line-height:1.55;color:rgba(255,255,255,0.82);max-width:460px;margin:0 0 28px;">Captación y conversión de pacientes en <span style="color:#5FCFFA;font-weight:600;">Medicina Biológica</span> para los consultorios de Puebla y Tehuacán.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;">
+            <div style="display:inline-flex;flex-direction:column;gap:2px;padding:11px 18px;border-radius:9999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);">
+              <span style="font-family:'JetBrains Mono';font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);">Periodo</span>
+              <span style="font-family:'Outfit';font-weight:700;font-size:14px;color:#fff;">6 meses · mínimo</span>
+            </div>
+            <div style="display:inline-flex;flex-direction:column;gap:2px;padding:11px 18px;border-radius:9999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);">
+              <span style="font-family:'JetBrains Mono';font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);display:inline-flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:9999px;background:#5FCFFA;animation:aig-pulse 2s infinite;"></span>Fecha</span>
+              <span style="font-family:'Outfit';font-weight:700;font-size:14px;color:#fff;">19 jun 2026</span>
+            </div>
+          </div>
+        </div>
+        <div style="flex:none;position:relative;width:188px;height:188px;">
+          <div style="position:absolute;inset:-14px;border-radius:9999px;border:1.5px dashed rgba(95,207,250,0.55);animation:aig-spin 60s linear infinite;"></div>
+          <div style="position:absolute;inset:0;border-radius:9999px;background:#fff;border:4px solid #fff;box-shadow:0 30px 60px -25px rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/logo-whitehead.png" alt="Logo Dr. Witehead" style="width:140px;height:auto;display:block;"></div>
+        </div>
+      </div>
+
+      <div class="pulse-strip" style="margin-top:56px;background:rgba(255,255,255,0.03);border-top:1px solid rgba(255,255,255,0.10);display:grid;grid-template-columns:repeat(3,1fr);">
+        <div style="padding:26px 22px;border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5FCFFA;margin-bottom:10px;">Pacientes nuevos · 6 meses</div>
+          <div style="font-family:'Outfit';font-weight:900;font-size:clamp(28px,4vw,36px);letter-spacing:-0.02em;color:#fff;line-height:1;"><span data-count="20">20</span><span style="color:rgba(255,255,255,0.4);font-weight:600;"> – </span><span data-count="58">58</span></div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:8px;">Acumulados · conservador a optimista</div>
+        </div>
+        <div style="padding:26px 22px;border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5FCFFA;margin-bottom:10px;">Valor por paciente</div>
+          <div style="font-family:'Outfit';font-weight:900;font-size:clamp(28px,4vw,36px);letter-spacing:-0.02em;color:#fff;line-height:1;"><span data-count="4675" data-prefix="$">$4,675</span></div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:8px;">LTV esperado por paciente</div>
+        </div>
+        <div style="padding:26px 22px;">
+          <div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5FCFFA;margin-bottom:10px;">ROAS · 12 meses</div>
+          <div style="font-family:'Outfit';font-weight:900;font-size:clamp(28px,4vw,36px);letter-spacing:-0.02em;color:#fff;line-height:1;"><span class="aprx" style="font-size:0.55em;color:rgba(255,255,255,0.45);">~</span>1.7<span style="font-size:0.5em;font-weight:600;color:rgba(255,255,255,0.55);">x</span><span style="color:rgba(255,255,255,0.4);font-weight:600;"> – </span>5.2<span style="font-size:0.5em;font-weight:600;color:rgba(255,255,255,0.55);">x</span></div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:8px;">Conservador a optimista</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 01 RESUMEN -->
+  <section id="s1" data-sec="" data-screen-label="01 Resumen general" style="position:relative;border-bottom:1px solid #efecf4;">
+    <div style="max-width:980px;margin:0 auto;padding:80px 24px;">
+      <button class="sec-toggle" aria-expanded="true" style="all:unset;display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;cursor:pointer;box-sizing:border-box;">
+        <div style="grid-column:1 / -1;display:inline-flex;align-items:center;gap:14px;margin-bottom:16px;"><span style="width:32px;height:32px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;">01</span><span style="font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6F4C9E;">Resumen</span></div>
+        <h2 class="sec-title" style="grid-column:1;font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;letter-spacing:-0.025em;color:#1B1124;margin:0;transition:color .22s;">Resumen general</h2>
+        <span class="chev" style="grid-column:2;align-self:center;width:32px;height:32px;border-radius:9999px;display:flex;align-items:center;justify-content:center;transition:all .35s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b7b0bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <div class="sec-body" style="display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1),opacity .4s,margin .4s;opacity:1;margin-top:28px;">
+        <div style="overflow:hidden;">
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 12px;">Objetivo</h4>
+          <p data-reveal="" style="font-size:18px;line-height:1.6;color:#4a3d58;max-width:760px;margin:0 0 40px;">Conseguirle al Dr. Witehead un flujo constante de pacientes nuevos para sus consultorios de Puebla y Tehuacán, sin que dependa exclusivamente del boca a boca.</p>
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 18px;">Qué esperar en 6 meses</h4>
+          <ul style="list-style:none;padding:0;margin:0 0 36px;display:flex;flex-direction:column;gap:14px;max-width:780px;">
+            <li data-reveal="" data-d="1" style="display:flex;gap:13px;align-items:flex-start;"><span style="width:7px;height:7px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:16px;line-height:1.6;color:#4a3d58;">Arrancar con 2 a 5 pacientes nuevos al mes desde Google. Llegar a 4-12 al mes cuando entre Meta.</span></li>
+            <li data-reveal="" data-d="2" style="display:flex;gap:13px;align-items:flex-start;"><span style="width:7px;height:7px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:16px;line-height:1.6;color:#4a3d58;">Una página de aterrizaje hecha para convertir, más Google Business, Doctoralia y redes ordenadas en las dos sedes.</span></li>
+            <li data-reveal="" data-d="3" style="display:flex;gap:13px;align-items:flex-start;"><span style="width:7px;height:7px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:16px;line-height:1.6;color:#4a3d58;">Datos por canal para saber qué funciona antes de meterle más dinero a la pauta.</span></li>
+          </ul>
+          <div class="kpi-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+            <div data-reveal="" data-d="1" style="position:relative;overflow:hidden;background:#EEECFF;border-radius:34px;padding:24px;">
+              <div style="position:absolute;bottom:-30px;right:-30px;width:140px;height:140px;border-radius:9999px;background:radial-gradient(circle,rgba(253,50,123,0.18),transparent 70%);"></div>
+              <div style="font-family:'DM Sans';font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#6F4C9E;min-height:32px;">Arranque · Google</div>
+              <div style="font-family:'Outfit';font-weight:900;font-size:38px;letter-spacing:-0.02em;color:#312740;line-height:1;margin-top:6px;">2–5</div>
+              <div style="font-size:14px;color:#7b7188;margin-top:10px;">pacientes nuevos al mes desde el <span style="color:#1B1124;font-weight:600;">día uno</span></div>
+            </div>
+            <div data-reveal="" data-d="2" style="position:relative;overflow:hidden;background:#EEECFF;border-radius:34px;padding:24px;">
+              <div style="position:absolute;bottom:-30px;right:-30px;width:140px;height:140px;border-radius:9999px;background:radial-gradient(circle,rgba(253,50,123,0.18),transparent 70%);"></div>
+              <div style="font-family:'DM Sans';font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#6F4C9E;min-height:32px;">Con Meta activo</div>
+              <div style="font-family:'Outfit';font-weight:900;font-size:38px;letter-spacing:-0.02em;color:#312740;line-height:1;margin-top:6px;">4–12</div>
+              <div style="font-size:14px;color:#7b7188;margin-top:10px;">pacientes al mes con el <span style="color:#1B1124;font-weight:600;">flujo combinado</span></div>
+            </div>
+            <div data-reveal="" data-d="3" style="position:relative;overflow:hidden;background:#EEECFF;border-radius:34px;padding:24px;">
+              <div style="position:absolute;bottom:-30px;right:-30px;width:140px;height:140px;border-radius:9999px;background:radial-gradient(circle,rgba(253,50,123,0.18),transparent 70%);"></div>
+              <div style="font-family:'DM Sans';font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#6F4C9E;min-height:32px;">Sedes activas</div>
+              <div style="font-family:'Outfit';font-weight:900;font-size:38px;letter-spacing:-0.02em;color:#312740;line-height:1;margin-top:6px;">2</div>
+              <div style="font-size:14px;color:#7b7188;margin-top:10px;">Puebla y Tehuacán, con <span style="color:#1B1124;font-weight:600;">datos por canal</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 EL RETO -->
+  <section id="s2" data-sec="" data-screen-label="02 El reto" style="position:relative;border-bottom:1px solid #efecf4;">
+    <div style="max-width:980px;margin:0 auto;padding:80px 24px;">
+      <button class="sec-toggle" aria-expanded="true" style="all:unset;display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;cursor:pointer;box-sizing:border-box;">
+        <div style="grid-column:1 / -1;display:inline-flex;align-items:center;gap:14px;margin-bottom:16px;"><span style="width:32px;height:32px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;">02</span><span style="font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6F4C9E;">El reto</span></div>
+        <h2 class="sec-title" style="grid-column:1;font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;letter-spacing:-0.025em;color:#1B1124;margin:0;transition:color .22s;">El reto</h2>
+        <span class="chev" style="grid-column:2;align-self:center;width:32px;height:32px;border-radius:9999px;display:flex;align-items:center;justify-content:center;transition:all .35s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b7b0bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <div class="sec-body" style="display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1),opacity .4s,margin .4s;opacity:1;margin-top:28px;">
+        <div style="overflow:hidden;">
+          <p data-reveal="" style="font-size:17px;line-height:1.65;color:#4a3d58;max-width:780px;margin:0 0 20px;">El Dr. Witehead lleva años tratando pacientes complejos en cinco sistemas: urológico, gastrohepático, respiratorio, neurológico y circulatorio. Formación médica formal, especialización en biológica, dos sedes activas, sitio web y presencia en redes. Le falta una sola cosa: pauta.</p>
+          <p data-reveal="" style="font-size:17px;line-height:1.65;color:#4a3d58;max-width:780px;margin:0 0 20px;">Hoy cada paciente nuevo llega porque alguien lo recomendó. Eso funciona, pero le pone un techo. Crecer al ritmo que quiere implica traer gente que no conoce al doctor — y para eso, el boca a boca no alcanza.</p>
+          <p data-reveal="" style="font-size:17px;line-height:1.65;color:#4a3d58;max-width:780px;margin:0 0 28px;">Revisamos el Keyword Planner antes de armar la estrategia. Encontramos algo importante: la búsqueda exacta "medicina biológica" en la región tiene apenas 20 al mes. Es muy poco. Significa que no podemos depender solo de Google: hay que ir también a buscar a los pacientes que tienen el padecimiento pero no saben que esta alternativa existe.</p>
+          <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:16px;margin:0 0 40px;">
+            <div style="flex:1 1 150px;background:#EEECFF;border-radius:22px;padding:20px 22px;"><div style="font-family:'Outfit';font-weight:900;font-size:28px;color:#312740;line-height:1;">5</div><div style="font-size:13px;color:#7b7188;margin-top:7px;">sistemas tratados</div></div>
+            <div style="flex:1 1 150px;background:#EEECFF;border-radius:22px;padding:20px 22px;"><div style="font-family:'Outfit';font-weight:900;font-size:28px;color:#312740;line-height:1;">2</div><div style="font-size:13px;color:#7b7188;margin-top:7px;">sedes activas</div></div>
+            <div style="flex:1 1 150px;background:#EEECFF;border-radius:22px;padding:20px 22px;"><div style="font-family:'Outfit';font-weight:900;font-size:28px;color:#312740;line-height:1;">~20<span style="font-size:0.5em;color:#7b7188;font-weight:600;"> /mes</span></div><div style="font-size:13px;color:#7b7188;margin-top:7px;">búsquedas "medicina biológica"</div></div>
+            <div style="flex:1 1 150px;background:#EEECFF;border-radius:22px;padding:20px 22px;"><div style="font-family:'Outfit';font-weight:900;font-size:28px;color:#312740;line-height:1;">0</div><div style="font-size:13px;color:#7b7188;margin-top:7px;">pauta activa hoy</div></div>
+          </div>
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 18px;">Las tres brechas que más pesan hoy</h4>
+          <div class="eje-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+            <div data-reveal="" data-d="1" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:24px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);"><div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#D4165B;margin-bottom:12px;">Brecha 01</div><p style="font-size:15.5px;line-height:1.55;color:#1B1124;margin:0;font-weight:600;">No hay pauta activa en ningún canal.</p></div>
+            <div data-reveal="" data-d="2" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:24px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);"><div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#D4165B;margin-bottom:12px;">Brecha 02</div><p style="font-size:15.5px;line-height:1.55;color:#1B1124;margin:0;font-weight:600;">El sitio web actual no está hecho para convertir tráfico pagado: presenta la marca, pero no cierra un WhatsApp.</p></div>
+            <div data-reveal="" data-d="3" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:24px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);"><div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#D4165B;margin-bottom:12px;">Brecha 03</div><p style="font-size:15.5px;line-height:1.55;color:#1B1124;margin:0;font-weight:600;">En redes y búsquedas, la medicina biológica se mezcla con propuestas alternativas sin respaldo médico. El posicionamiento clínico-científico del doctor no aparece en ningún lado.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 SISTEMA -->
+  <section id="s3" data-sec="" data-screen-label="03 Sistema de captación" style="position:relative;border-bottom:1px solid #efecf4;">
+    <div style="max-width:980px;margin:0 auto;padding:80px 24px;">
+      <button class="sec-toggle" aria-expanded="true" style="all:unset;display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;cursor:pointer;box-sizing:border-box;">
+        <div style="grid-column:1 / -1;display:inline-flex;align-items:center;gap:14px;margin-bottom:16px;"><span style="width:32px;height:32px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;">03</span><span style="font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6F4C9E;">El sistema</span></div>
+        <h2 class="sec-title" style="grid-column:1;font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;letter-spacing:-0.025em;color:#1B1124;margin:0;transition:color .22s;">Sistema de captación de pacientes</h2>
+        <span class="chev" style="grid-column:2;align-self:center;width:32px;height:32px;border-radius:9999px;display:flex;align-items:center;justify-content:center;transition:all .35s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b7b0bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <div class="sec-body" style="display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1),opacity .4s,margin .4s;opacity:1;margin-top:28px;">
+        <div style="overflow:hidden;">
+          <p data-reveal="" style="font-size:17px;line-height:1.6;color:#7b7188;max-width:720px;margin:0 0 28px;">Del padecimiento crónico al paciente que regresa y refiere: seis etapas, cada una con su componente.</p>
+          <div data-reveal="" style="border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;">
+            <table style="width:100%;border-collapse:collapse;">
+              <thead><tr>
+                <th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:15px 18px;border-bottom:none;">Etapa</th>
+                <th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:15px 18px;border-bottom:none;">El paciente...</th>
+                <th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:15px 18px;border-bottom:none;">Componente</th>
+              </tr></thead>
+              <tbody>
+                <tr><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-weight:700;color:#1B1124;font-size:15px;">1. Necesidad</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#4a3d58;">Padecimiento crónico que la medicina convencional no resolvió</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:14px;color:#6F4C9E;font-weight:600;">Estrategia de comunicación</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-weight:700;color:#1B1124;font-size:15px;">2. Descubrimiento / Búsqueda</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#4a3d58;">Ve un anuncio en Instagram · o busca activamente en Google</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:14px;color:#6F4C9E;font-weight:600;">Meta Ads + Google Ads</td></tr>
+                <tr><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-weight:700;color:#1B1124;font-size:15px;">3. Evaluación</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#4a3d58;">Hace clic, llega a la landing, revisa enfoque y credenciales</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:14px;color:#6F4C9E;font-weight:600;">Landing + perfiles digitales</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-weight:700;color:#1B1124;font-size:15px;">4. Contacto</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#4a3d58;">Escribe por WhatsApp con su síntoma</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:14px;color:#6F4C9E;font-weight:600;">WhatsApp Business</td></tr>
+                <tr><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-weight:700;color:#1B1124;font-size:15px;">5. Agenda</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#4a3d58;">Recibe información y agenda primera consulta</td><td style="padding:15px 18px;border-bottom:1px solid #efecf4;font-size:14px;color:#6F4C9E;font-weight:600;">Proceso comercial + scripts</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:15px 18px;font-weight:700;color:#1B1124;font-size:15px;">6. Retención</td><td style="padding:15px 18px;font-size:15px;color:#4a3d58;">Vuelve a seguimientos, refiere a familia y amigos</td><td style="padding:15px 18px;font-size:14px;color:#6F4C9E;font-weight:600;">Comunicación post-consulta</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 COMPONENTES -->
+  <section id="s4" data-sec="" data-screen-label="04 Componentes" style="position:relative;border-bottom:1px solid #efecf4;">
+    <div style="max-width:980px;margin:0 auto;padding:80px 24px;">
+      <button class="sec-toggle" aria-expanded="true" style="all:unset;display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;cursor:pointer;box-sizing:border-box;">
+        <div style="grid-column:1 / -1;display:inline-flex;align-items:center;gap:14px;margin-bottom:16px;"><span style="width:32px;height:32px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;">04</span><span style="font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6F4C9E;">Componentes</span></div>
+        <h2 class="sec-title" style="grid-column:1;font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;letter-spacing:-0.025em;color:#1B1124;margin:0;transition:color .22s;">Componentes del sistema</h2>
+        <span class="chev" style="grid-column:2;align-self:center;width:32px;height:32px;border-radius:9999px;display:flex;align-items:center;justify-content:center;transition:all .35s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b7b0bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <div class="sec-body" style="display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1),opacity .4s,margin .4s;opacity:1;margin-top:28px;">
+        <div style="overflow:hidden;display:flex;flex-direction:column;gap:18px;">
+          <div data-reveal="" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:28px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:12px;background:#6F4C9E;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 8px 18px -8px rgba(111,76,158,0.7);">1</span><h3 style="font-family:'Outfit';font-size:21px;font-weight:800;letter-spacing:-0.01em;color:#1B1124;margin:0;">Manual de Comunicación y Estrategia de Marca</h3></div>
+            <p style="font-size:15.5px;line-height:1.6;color:#7b7188;margin:0 0 16px;">Antes de pautar un peso, definimos cómo se va a presentar el doctor al mercado.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;">
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Posicionamiento del Dr. Witehead como médico clínico con respaldo científico, separándolo de la oferta "alternativa".</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Buyer persona distinto por sistema afectado, porque el paciente urológico no se comunica igual que el respiratorio.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Guion de mensajes para anuncios, landing y WhatsApp: que la conversación fluya hasta el agendamiento sin tropezar.</span></li>
+            </ul>
+          </div>
+          <div data-reveal="" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:28px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:12px;background:#6F4C9E;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 8px 18px -8px rgba(111,76,158,0.7);">2</span><h3 style="font-family:'Outfit';font-size:21px;font-weight:800;letter-spacing:-0.01em;color:#1B1124;margin:0;">Optimización de Perfiles Digitales (Puebla + Tehuacán)</h3></div>
+            <p style="font-size:15.5px;line-height:1.6;color:#7b7188;margin:0 0 16px;">Lo que ya existe pero no está trabajando para el doctor:</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;">
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Google Business Profile de ambas sedes, con fotos reales, descripción de servicios y manejo de reseñas.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Doctoralia, Instagram, Facebook y WhatsApp Business alineados con el mismo mensaje y CTAs claros.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Catálogo de WhatsApp por sistema tratado, con bienvenida que califica al paciente desde el primer mensaje.</span></li>
+            </ul>
+          </div>
+          <div data-reveal="" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:28px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:12px;background:#6F4C9E;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 8px 18px -8px rgba(111,76,158,0.7);">3</span><h3 style="font-family:'Outfit';font-size:21px;font-weight:800;letter-spacing:-0.01em;color:#1B1124;margin:0;">Landing Page de Conversión Dedicada</h3></div>
+            <p style="font-size:15.5px;line-height:1.6;color:#7b7188;margin:0 0 16px;">El sitio web actual presenta al Dr. Witehead, pero no fue diseñado para cerrar un WhatsApp. Necesitamos una página específica para el tráfico pagado.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;">
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Diseño Mobile First, porque la mayoría del tráfico de Meta llega desde celular.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Estructura: padecimiento → enfoque biológico → credenciales → testimonios → WhatsApp.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Una variante para Puebla, otra para Tehuacán, con GA4 y Píxel de Meta midiendo cada clic.</span></li>
+            </ul>
+          </div>
+          <div data-reveal="" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:28px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:12px;background:#6F4C9E;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 8px 18px -8px rgba(111,76,158,0.7);">4</span><h3 style="font-family:'Outfit';font-size:21px;font-weight:800;letter-spacing:-0.01em;color:#1B1124;margin:0;">Gestión de Campañas en Google Ads</h3></div>
+            <p style="font-size:15.5px;line-height:1.6;color:#7b7188;margin:0 0 16px;">Aquí buscamos al paciente que ya está tecleando "médico naturista", "tratamiento natural [síntoma]" o el nombre del padecimiento. Ningún competidor local pauta hoy en este nicho — eso es ventaja.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;">
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Keyword research enfocado en términos con volumen real y keywords de competidores locales.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Una campaña por sede, con ad groups por sistema tratado para mover presupuesto donde funcione.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Optimización semana a semana: pujas, términos negativos, Quality Score, A/B de copys.</span></li>
+            </ul>
+          </div>
+          <div data-reveal="" style="background:#fff;border:1px solid #efecf4;border-radius:28px;padding:28px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:12px;background:#6F4C9E;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 8px 18px -8px rgba(111,76,158,0.7);">5</span><h3 style="font-family:'Outfit';font-size:21px;font-weight:800;letter-spacing:-0.01em;color:#1B1124;margin:0;">Gestión de Campañas en Meta Ads</h3></div>
+            <p style="font-size:15.5px;line-height:1.6;color:#7b7188;margin:0 0 16px;">Aquí no esperamos a que el paciente busque: lo encontramos antes. Activamos primero en Puebla (donde hay más mercado y mejor ticket) y replicamos a Tehuacán cuando ya sabemos qué funciona.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;">
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Campañas separadas por sistema tratado, con segmentación por intereses de salud y wellness.</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">Creativos en imagen y video corto que comuniquen el enfoque médico-científico, no el "alternativo".</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:6px;height:6px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15px;line-height:1.55;color:#4a3d58;">A/B testing de ángulos y rotación de creativos cada 3-4 semanas para que la audiencia no se canse.</span></li>
+            </ul>
+          </div>
+          <div data-reveal="" style="position:relative;background:#F6F4FF;border:1px solid #e5e1ed;border-radius:22px;padding:22px 24px 22px 28px;overflow:hidden;">
+            <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#6F4C9E;"></div>
+            <div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#6F4C9E;margin-bottom:8px;">Reportes mensuales</div>
+            <p style="font-size:15.5px;line-height:1.6;color:#4a3d58;margin:0;"><strong style="color:#1B1124;">(Google + Meta consolidados):</strong> CPL por canal, CPA combinado, qué mensajes y keywords están convirtiendo, y a dónde mover el presupuesto el mes siguiente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 ESCENARIOS -->
+  <section id="s5" data-sec="" data-screen-label="05 Escenarios" style="position:relative;border-bottom:1px solid #efecf4;">
+    <div style="max-width:980px;margin:0 auto;padding:80px 24px;">
+      <button class="sec-toggle" aria-expanded="true" style="all:unset;display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;cursor:pointer;box-sizing:border-box;">
+        <div style="grid-column:1 / -1;display:inline-flex;align-items:center;gap:14px;margin-bottom:16px;"><span style="width:32px;height:32px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;">05</span><span style="font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6F4C9E;">Proyecciones</span></div>
+        <h2 class="sec-title" style="grid-column:1;font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;letter-spacing:-0.025em;color:#1B1124;margin:0;transition:color .22s;">Escenarios proyectados por fase</h2>
+        <span class="chev" style="grid-column:2;align-self:center;width:32px;height:32px;border-radius:9999px;display:flex;align-items:center;justify-content:center;transition:all .35s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b7b0bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <div class="sec-body" style="display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1),opacity .4s,margin .4s;opacity:1;margin-top:28px;">
+        <div style="overflow:hidden;">
+          <p data-reveal="" style="font-size:16.5px;line-height:1.65;color:#4a3d58;max-width:820px;margin:0 0 36px;">Antes de las tablas, una nota importante: las tasas de cierre cambian mucho entre canales. El paciente que busca en Google ya tiene una necesidad activa, así que cierra entre 30% y 45% de las veces. El de Meta apenas descubre la categoría — cierra entre 10% y 18%. Por eso Google rinde mejor por peso invertido pero Meta carga el volumen del sistema.</p>
+
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 14px;">Fase 1 — Meses 1-2 · Google Ads (Puebla + Tehuacán)</h4>
+          <div data-reveal="" style="border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;margin-bottom:36px;">
+            <table style="width:100%;border-collapse:collapse;">
+              <thead><tr><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:14px 18px;border-bottom:none;">Métrica</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Conservador</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Optimista</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Inversión Google Ads</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#1B1124;text-align:center;">$1,500</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#1B1124;text-align:center;">$1,500</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;" data-comment-anchor="baeffe6c05-td">CPC promedio</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$25</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$18</td></tr>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Visitas a landing</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">~60</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">~83</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Leads (conv landing)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">~5 (8%)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">~10 (12%)</td></tr>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Cierre lead → paciente</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">30%</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">45%</td></tr>
+                <tr style="background:#D8CDEF;"><td style="padding:14px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:800;">Pacientes nuevos / mes</td><td style="padding:14px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:18px;color:#6F4C9E;text-align:center;">2</td><td style="padding:14px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:18px;color:#FD327B;text-align:center;">5</td></tr>
+                <tr><td style="padding:13px 18px;font-size:15px;color:#1B1124;font-weight:600;">CPA (solo pauta)</td><td style="padding:13px 18px;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$750</td><td style="padding:13px 18px;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$300</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 14px;">Fase 2 — Meses 3-4 · Google + Meta Puebla</h4>
+          <div data-reveal="" style="border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;margin-bottom:36px;">
+            <table style="width:100%;border-collapse:collapse;">
+              <thead><tr><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:14px 18px;border-bottom:none;">Métrica</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Conservador</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Optimista</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Google Ads</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:13.5px;color:#4a3d58;text-align:center;">$1,500 → 2 pac (cierre 30%)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:13.5px;color:#4a3d58;text-align:center;">$1,500 → 5 pac (cierre 45%)</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Meta Ads Puebla</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:13.5px;color:#4a3d58;text-align:center;">$4,000 → 2 pac (cierre 10%)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:13.5px;color:#4a3d58;text-align:center;">$4,000 → 7 pac (cierre 18%)</td></tr>
+                <tr style="background:#D8CDEF;"><td style="padding:14px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:800;">Pacientes nuevos / mes (TOTAL)</td><td style="padding:14px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:18px;color:#6F4C9E;text-align:center;">4</td><td style="padding:14px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:18px;color:#FD327B;text-align:center;">12</td></tr>
+                <tr><td style="padding:13px 18px;font-size:15px;color:#1B1124;font-weight:600;">CPA combinado</td><td style="padding:13px 18px;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$1,375</td><td style="padding:13px 18px;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$458</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 14px;">Consolidado 6 meses</h4>
+          <div data-reveal="" style="border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;margin-bottom:28px;">
+            <table style="width:100%;border-collapse:collapse;">
+              <thead><tr><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:14px 18px;border-bottom:none;">Métrica</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Conservador</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Optimista</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Pacientes nuevos acumulados</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:17px;color:#6F4C9E;text-align:center;">20</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:17px;color:#FD327B;text-align:center;">58</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Inversión total pauta (6 meses)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$25,000</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$25,000</td></tr>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Ingreso primera cita acumulado</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$50,000</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$145,000</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;font-size:15px;color:#1B1124;font-weight:600;">CPA promedio (solo pauta)</td><td style="padding:13px 18px;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$1,250</td><td style="padding:13px 18px;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$431</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div data-reveal="" style="position:relative;background:linear-gradient(120deg,rgba(253,50,123,0.08),rgba(253,50,123,0.02));border:1px solid rgba(253,50,123,0.22);border-radius:22px;padding:20px 24px 20px 28px;overflow:hidden;margin-bottom:56px;">
+            <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#FD327B;"></div>
+            <div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#D4165B;margin-bottom:8px;">Nota</div>
+            <p style="font-size:15px;line-height:1.6;color:#4a3d58;margin:0;">Google tiene techo de volumen por las pocas búsquedas mensuales del nicho. Por eso lo topamos en $1,500 y dejamos que Meta cargue lo demás desde M3. La rentabilidad real del sistema se ve en el LTV, no en la primera cita.</p>
+          </div>
+
+          <div data-reveal="" style="display:flex;align-items:center;gap:14px;margin-bottom:18px;"><span style="width:32px;height:32px;border-radius:9999px;background:#5FCFFA;color:#2E2340;font-family:'Outfit';font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;">★</span><h3 style="font-family:'Outfit';font-size:24px;font-weight:900;letter-spacing:-0.015em;color:#1B1124;margin:0;">Valor de Vida del Paciente</h3></div>
+          <p data-reveal="" style="font-size:16px;line-height:1.65;color:#4a3d58;max-width:800px;margin:0 0 28px;">La primera consulta es solo el inicio. La mitad de los pacientes regresa para un segundo tratamiento; la mitad de esos, para un tercero. Y uno de cada diez contrata además el servicio de factor de transferencias.</p>
+          <div data-reveal="" style="border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;margin-bottom:28px;">
+            <table style="width:100%;border-collapse:collapse;">
+              <thead><tr><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:14px 18px;border-bottom:none;">Concepto</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Probabilidad</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Ticket</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Ingreso esperado</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Primera cita + tratamiento</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">100%</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$2,500</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#1B1124;text-align:center;font-weight:600;">$2,500</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Segundo tratamiento</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">50%</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$2,500</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#1B1124;text-align:center;font-weight:600;">$1,250</td></tr>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Tercer tratamiento</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">25%</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$2,500</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#1B1124;text-align:center;font-weight:600;">$625</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Factor de transferencias</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">10%</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$3,000</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#1B1124;text-align:center;font-weight:600;">$300</td></tr>
+                <tr style="background:#D8CDEF;"><td colspan="3" style="padding:15px 18px;font-size:15px;color:#1B1124;font-weight:800;">Valor esperado por paciente</td><td style="padding:15px 18px;font-family:'Outfit';font-weight:900;font-size:19px;color:#FD327B;text-align:center;">$4,675</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div data-reveal="" style="border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;margin-bottom:24px;">
+            <table style="width:100%;border-collapse:collapse;">
+              <thead><tr><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:14px 18px;border-bottom:none;">Métrica</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Conservador</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Optimista</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Pacientes nuevos en 12 meses</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">44</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">130</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">LTV acumulado a 12 meses</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:16px;color:#6F4C9E;text-align:center;">$205,700</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'Outfit';font-weight:900;font-size:16px;color:#FD327B;text-align:center;">$607,750</td></tr>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Inversión anual (fee + pauta rampeada)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$118,000</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$118,000</td></tr>
+                <tr style="background:#D8CDEF;"><td style="padding:15px 18px;font-size:15px;color:#1B1124;font-weight:800;">ROAS proyectado a 12 meses</td><td style="padding:15px 18px;font-family:'Outfit';font-weight:900;font-size:18px;color:#6F4C9E;text-align:center;">~1.7x</td><td style="padding:15px 18px;font-family:'Outfit';font-weight:900;font-size:18px;color:#FD327B;text-align:center;">~5.2x</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p data-reveal="" style="font-size:16px;line-height:1.65;color:#4a3d58;max-width:800px;margin:0;">En el escenario conservador, por cada peso invertido el doctor recupera $1.70 en valor directo. En el optimista, $5.20. Y eso sin contar el efecto del boca a boca de cada paciente nuevo, que en salud suele ser un multiplicador grande.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 POR QUÉ + TIMELINE -->
+  <section id="s6" data-sec="" data-screen-label="06 Ruta de implementación" style="position:relative;border-bottom:1px solid #efecf4;">
+    <div style="max-width:980px;margin:0 auto;padding:80px 24px;">
+      <button class="sec-toggle" aria-expanded="true" style="all:unset;display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;cursor:pointer;box-sizing:border-box;">
+        <div style="grid-column:1 / -1;display:inline-flex;align-items:center;gap:14px;margin-bottom:16px;"><span style="width:32px;height:32px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;">06</span><span style="font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6F4C9E;">La ruta</span></div>
+        <h2 class="sec-title" style="grid-column:1;font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;letter-spacing:-0.025em;color:#1B1124;margin:0;transition:color .22s;">Por qué tiene sentido &amp; timeline</h2>
+        <span class="chev" style="grid-column:2;align-self:center;width:32px;height:32px;border-radius:9999px;display:flex;align-items:center;justify-content:center;transition:all .35s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b7b0bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <div class="sec-body" style="display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1),opacity .4s,margin .4s;opacity:1;margin-top:28px;">
+        <div style="overflow:hidden;">
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 18px;">Por qué este sistema tiene sentido</h4>
+          <div class="eje-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:56px;">
+            <div data-reveal="" data-d="1" style="position:relative;overflow:hidden;background:#fff;border:1px solid #efecf4;border-radius:28px;padding:26px 24px 24px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+              <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#6F4C9E;"></div>
+              <div style="position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;border-radius:9999px;background:radial-gradient(circle,rgba(111,76,158,0.16),transparent 70%);"></div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:9999px;background:#6F4C9E;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -8px rgba(111,76,158,0.7);">1</span><span style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6F4C9E;">Eficiencia</span></div>
+              <h5 style="font-family:'Outfit';font-size:17px;font-weight:800;color:#1B1124;margin:0 0 10px;min-height:46px;">Empezamos por lo más eficiente.</h5>
+              <p style="font-size:14.5px;line-height:1.55;color:#7b7188;margin:0;">Google Ads desde el día uno, con poca inversión y máxima calidad de lead. Meta entra después, cuando ya validamos que el cierre por WhatsApp funciona.</p>
+            </div>
+            <div data-reveal="" data-d="2" style="position:relative;overflow:hidden;background:#fff;border:1px solid #efecf4;border-radius:28px;padding:26px 24px 24px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+              <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#FD327B;"></div>
+              <div style="position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;border-radius:9999px;background:radial-gradient(circle,rgba(253,50,123,0.16),transparent 70%);"></div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -8px rgba(253,50,123,0.7);">2</span><span style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#D4165B;">Secuencia</span></div>
+              <h5 style="font-family:'Outfit';font-size:17px;font-weight:800;color:#1B1124;margin:0 0 10px;min-height:46px;">Puebla primero, Tehuacán después.</h5>
+              <p style="font-size:14.5px;line-height:1.55;color:#7b7188;margin:0;">Activamos Meta donde hay más mercado y mejor ticket. Cuando el modelo está probado, lo replicamos.</p>
+            </div>
+            <div data-reveal="" data-d="3" style="position:relative;overflow:hidden;background:#fff;border:1px solid #efecf4;border-radius:28px;padding:26px 24px 24px;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);">
+              <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#2FA9D6;"></div>
+              <div style="position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;border-radius:9999px;background:radial-gradient(circle,rgba(95,207,250,0.18),transparent 70%);"></div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;"><span style="width:40px;height:40px;border-radius:9999px;background:#2FA9D6;color:#fff;font-family:'Outfit';font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -8px rgba(47,169,214,0.7);">3</span><span style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#2FA9D6;">Diferenciador</span></div>
+              <h5 style="font-family:'Outfit';font-size:17px;font-weight:800;color:#1B1124;margin:0 0 10px;min-height:46px;">El doctor es la diferencia.</h5>
+              <p style="font-size:14.5px;line-height:1.55;color:#7b7188;margin:0;">Médico con formación clínica vs. propuestas alternativas sin respaldo. Comunicado bien, eso convierte solo.</p>
+            </div>
+          </div>
+
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 28px;">Timeline de implementación</h4>
+          <div style="position:relative;padding-left:34px;">
+            <div style="position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,#e5e1ed,#6F4C9E 30%,#5FCFFA 65%,#FD327B 90%);"></div>
+            <div data-reveal="" style="position:relative;margin-bottom:36px;">
+              <span style="position:absolute;left:-34px;top:2px;width:16px;height:16px;border-radius:9999px;background:#b7b0bf;border:3px solid #F6F4FF;box-shadow:0 0 0 1px #e5e1ed;"></span>
+              <div style="display:inline-block;font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6F4C9E;background:#EEECFF;border-radius:9999px;padding:5px 12px;margin-bottom:10px;">Semanas 1-3</div>
+              <h3 style="font-family:'Outfit';font-size:20px;font-weight:800;color:#1B1124;margin:0 0 12px;">Fase 0: Cimentación</h3>
+              <p style="font-size:15px;line-height:1.6;color:#4a3d58;margin:0 0 14px;max-width:760px;">Manual de comunicación, optimización de perfiles en ambas sedes, landing en sus dos variantes, instalación de Píxel de Meta, GA4 y eventos, keyword research, y estructura inicial de la cuenta de Google Ads.</p>
+              <div style="position:relative;background:#F6F4FF;border:1px solid #e5e1ed;border-radius:18px;padding:14px 18px 14px 22px;overflow:hidden;max-width:760px;"><div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#6F4C9E;"></div><span style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6F4C9E;margin-right:8px;">Hito</span><span style="font-size:14.5px;color:#1B1124;">todo listo para prender pauta</span></div>
+            </div>
+            <div data-reveal="" style="position:relative;margin-bottom:36px;">
+              <span style="position:absolute;left:-34px;top:2px;width:16px;height:16px;border-radius:9999px;background:#6F4C9E;border:3px solid #F6F4FF;box-shadow:0 0 0 1px #e5e1ed;"></span>
+              <div style="display:inline-block;font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6F4C9E;background:#EEECFF;border-radius:9999px;padding:5px 12px;margin-bottom:10px;">Meses 1-2</div>
+              <h3 style="font-family:'Outfit';font-size:20px;font-weight:800;color:#1B1124;margin:0 0 12px;">Fase 1: Google Ads — Puebla + Tehuacán</h3>
+              <p style="font-size:15px;line-height:1.6;color:#4a3d58;margin:0 0 14px;max-width:760px;">Lanzamos Google con monitoreo diario las primeras dos semanas. En paralelo, dejamos lista la cuenta de Meta. Empezamos a pedir reseñas en Google y Doctoralia a pacientes actuales.</p>
+              <div style="position:relative;background:#F6F4FF;border:1px solid #e5e1ed;border-radius:18px;padding:14px 18px 14px 22px;overflow:hidden;max-width:760px;"><div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#6F4C9E;"></div><span style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6F4C9E;margin-right:8px;">Hito</span><span style="font-size:14.5px;color:#1B1124;">CPL real validado, primeros 4-10 pacientes captados.</span></div>
+            </div>
+            <div data-reveal="" style="position:relative;margin-bottom:36px;">
+              <span style="position:absolute;left:-34px;top:2px;width:16px;height:16px;border-radius:9999px;background:#5FCFFA;border:3px solid #F6F4FF;box-shadow:0 0 0 1px #e5e1ed;"></span>
+              <div style="display:inline-block;font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#2FA9D6;background:rgba(95,207,250,0.14);border-radius:9999px;padding:5px 12px;margin-bottom:10px;">Meses 3-4</div>
+              <h3 style="font-family:'Outfit';font-size:20px;font-weight:800;color:#1B1124;margin:0 0 12px;">Fase 2: Meta Ads — Puebla</h3>
+              <p style="font-size:15px;line-height:1.6;color:#4a3d58;margin:0 0 14px;max-width:760px;">Activamos Meta solo en Puebla. Una campaña por sistema, A/B testing intensivo de ángulos y creativos durante el primer mes. Google sigue corriendo en ambas sedes.</p>
+              <div style="position:relative;background:#F6F4FF;border:1px solid #e5e1ed;border-radius:18px;padding:14px 18px 14px 22px;overflow:hidden;max-width:760px;"><div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#5FCFFA;"></div><span style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#2FA9D6;margin-right:8px;">Hito</span><span style="font-size:14.5px;color:#1B1124;">Meta validado en Puebla, flujo combinado de 4 a 12 pacientes al mes.</span></div>
+            </div>
+            <div data-reveal="" style="position:relative;">
+              <span style="position:absolute;left:-34px;top:2px;width:16px;height:16px;border-radius:9999px;background:#FD327B;border:3px solid #F6F4FF;box-shadow:0 0 0 4px rgba(253,50,123,0.22);"></span>
+              <div style="display:inline-block;font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#D4165B;background:rgba(253,50,123,0.12);border-radius:9999px;padding:5px 12px;margin-bottom:10px;">Meses 5-6 · opcional</div>
+              <h3 style="font-family:'Outfit';font-size:20px;font-weight:800;color:#1B1124;margin:0 0 12px;">Fase 3 <span style="font-weight:500;color:#7b7188;font-size:15px;">(opcional)</span>: Meta Ads — Tehuacán</h3>
+              <p style="font-size:15px;line-height:1.6;color:#4a3d58;margin:0 0 14px;max-width:760px;">Replicamos a Tehuacán lo que ya funcionó en Puebla, sin aumentar el presupuesto total: reasignamos parte de Meta Puebla al nuevo mercado.</p>
+              <div style="position:relative;background:#F6F4FF;border:1px solid #e5e1ed;border-radius:18px;padding:14px 18px 14px 22px;overflow:hidden;max-width:760px;margin-bottom:14px;"><div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#FD327B;"></div><span style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#D4165B;margin-right:8px;">Hito</span><span style="font-size:14.5px;color:#1B1124;">ambas sedes con datos comparativos, suficientes para decidir si escalar, ampliar agenda o abrir una tercera sede.</span></div>
+              <div style="position:relative;background:linear-gradient(120deg,rgba(95,207,250,0.10),rgba(95,207,250,0.02));border:1px solid rgba(95,207,250,0.3);border-radius:18px;padding:14px 18px;max-width:760px;"><span style="font-size:14.5px;color:#4a3d58;line-height:1.55;">Esta fase solo se activa si Meta Puebla validó CPL y CPA aceptables en M3-4. Si los datos sugieren reforzar Puebla, mantenemos ahí el presupuesto.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 INVERSIÓN -->
+  <section id="s7" data-sec="" data-screen-label="07 Modelo de inversión" style="position:relative;border-bottom:1px solid #efecf4;">
+    <div style="max-width:980px;margin:0 auto;padding:80px 24px;">
+      <button class="sec-toggle" aria-expanded="true" style="all:unset;display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;cursor:pointer;box-sizing:border-box;">
+        <div style="grid-column:1 / -1;display:inline-flex;align-items:center;gap:14px;margin-bottom:16px;"><span style="width:32px;height:32px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;">07</span><span style="font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6F4C9E;">Inversión</span></div>
+        <h2 class="sec-title" style="grid-column:1;font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;letter-spacing:-0.025em;color:#1B1124;margin:0;transition:color .22s;">Modelo de inversión</h2>
+        <span class="chev" style="grid-column:2;align-self:center;width:32px;height:32px;border-radius:9999px;display:flex;align-items:center;justify-content:center;transition:all .35s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b7b0bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+      </button>
+      <div class="sec-body" style="display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1),opacity .4s,margin .4s;opacity:1;margin-top:28px;">
+        <div style="overflow:hidden;">
+          <p data-reveal="" style="font-size:17px;line-height:1.6;color:#4a3d58;max-width:760px;margin:0 0 32px;">Proponemos un sistema único: <strong style="color:#6F4C9E;">Aigenci Pro</strong>. Como contacto BNI, el doctor recibe pricing preferencial.</p>
+          <div class="pro-row" data-reveal="" style="display:flex;flex-wrap:wrap;gap:24px;align-items:stretch;margin-bottom:36px;">
+            <div style="flex:1 1 380px;border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;">
+              <table style="width:100%;border-collapse:collapse;">
+                <thead><tr><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:14px 18px;border-bottom:none;">Componente</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#5FCFFA;text-align:center;padding:14px 18px;border-bottom:none;">Aigenci Pro</th></tr></thead>
+                <tbody>
+                  <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:14.5px;color:#7b7188;font-weight:600;">Enfoque</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:13px;color:#1B1124;text-align:center;font-weight:600;">Captación + Conversión · 2 sedes</td></tr>
+                  <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:14.5px;color:#1B1124;">1. Manual de Comunicación y Estrategia de Marca</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;text-align:center;"><span style="display:inline-flex;width:22px;height:22px;border-radius:9999px;background:rgba(37,211,102,0.14);color:#159a4b;align-items:center;justify-content:center;font-size:13px;font-weight:700;">✓</span></td></tr>
+                  <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:14.5px;color:#1B1124;">2. Optimización de Perfiles Digitales (2 sedes)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;text-align:center;"><span style="display:inline-flex;width:22px;height:22px;border-radius:9999px;background:rgba(37,211,102,0.14);color:#159a4b;align-items:center;justify-content:center;font-size:13px;font-weight:700;">✓</span></td></tr>
+                  <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:14.5px;color:#1B1124;">3. Landing Page de Conversión Dedicada</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;text-align:center;"><span style="display:inline-flex;width:22px;height:22px;border-radius:9999px;background:rgba(37,211,102,0.14);color:#159a4b;align-items:center;justify-content:center;font-size:13px;font-weight:700;">✓</span></td></tr>
+                  <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:14.5px;color:#1B1124;">4. Gestión de Campañas en Google Ads (Pue + Teh)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;text-align:center;"><span style="display:inline-flex;width:22px;height:22px;border-radius:9999px;background:rgba(37,211,102,0.14);color:#159a4b;align-items:center;justify-content:center;font-size:13px;font-weight:700;">✓</span></td></tr>
+                  <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:14.5px;color:#1B1124;">5. Gestión de Campañas en Meta Ads (Pue → Teh por fases)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;text-align:center;"><span style="display:inline-flex;width:22px;height:22px;border-radius:9999px;background:rgba(37,211,102,0.14);color:#159a4b;align-items:center;justify-content:center;font-size:13px;font-weight:700;">✓</span></td></tr>
+                  <tr><td style="padding:13px 18px;font-size:14.5px;color:#1B1124;">6. Reportes Mensuales con CPL/CPA por canal</td><td style="padding:13px 18px;text-align:center;"><span style="display:inline-flex;width:22px;height:22px;border-radius:9999px;background:rgba(37,211,102,0.14);color:#159a4b;align-items:center;justify-content:center;font-size:13px;font-weight:700;">✓</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="flex:1 1 280px;position:relative;overflow:hidden;background:#2E2340;border-radius:28px;padding:32px;display:flex;flex-direction:column;justify-content:center;">
+              <div style="position:absolute;inset:0;background:radial-gradient(300px 200px at 80% 20%,rgba(253,50,123,0.25),transparent 70%);pointer-events:none;"></div>
+              <div style="position:absolute;top:20px;right:20px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:62px;height:62px;border-radius:9999px;background:#FD327B;box-shadow:0 12px 26px -8px rgba(253,50,123,0.8);"><span style="font-family:'Outfit';font-weight:900;font-size:19px;color:#fff;line-height:1;">-38%</span><span style="font-family:'JetBrains Mono';font-size:7.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-top:2px;">BNI</span></div>
+              <div style="position:relative;">
+                <div style="font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5FCFFA;margin-bottom:14px;">Fee mensual · con descuento BNI</div>
+                <div style="font-family:'Outfit';font-weight:900;font-size:52px;letter-spacing:-0.02em;color:#fff;line-height:1;"><span data-count="5000" data-prefix="$">$5,000</span> <small style="font-size:0.32em;font-weight:600;color:rgba(255,255,255,0.55);">MXN</small></div>
+                <div style="margin-top:14px;font-size:14px;color:rgba(255,255,255,0.6);">Precio regular sin BNI · <span style="text-decoration:line-through;">$8,000 MXN</span> · <span style="color:#FD327B;font-weight:700;">37.5% off</span></div>
+                <div style="margin-top:24px;display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Pricing preferencial BNI</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 14px;">Inversión total mensual por fase</h4>
+          <div data-reveal="" style="border-radius:28px;overflow:hidden;border:1px solid #efecf4;box-shadow:0 2px 14px -6px rgba(31,24,41,0.10);background:#fff;margin-bottom:18px;">
+            <table style="width:100%;border-collapse:collapse;">
+              <thead><tr><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:left;padding:14px 18px;border-bottom:none;">Concepto</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Fase 1 (M1-2)</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Fase 2 (M3-4)</th><th style="background:#312740;font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-align:center;padding:14px 18px;border-bottom:none;">Fase 3 (M5-6)</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Fee Aigenci Pro</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$5,000</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$5,000</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$5,000</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Google Ads (Pue + Teh)</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$1,500</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$1,500</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$1,500</td></tr>
+                <tr><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Meta Ads Puebla</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#b7b0bf;text-align:center;">—</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$4,000</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$2,500</td></tr>
+                <tr style="background:#ECE7F9;"><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-size:15px;color:#1B1124;font-weight:600;">Meta Ads Tehuacán</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#b7b0bf;text-align:center;">—</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#b7b0bf;text-align:center;">—</td><td style="padding:13px 18px;border-bottom:1px solid #efecf4;font-family:'JetBrains Mono';font-size:14px;color:#4a3d58;text-align:center;">$1,500</td></tr>
+                <tr style="background:#D8CDEF;"><td style="padding:14px 18px;font-size:15px;color:#1B1124;font-weight:800;">Inversión total mensual</td><td style="padding:14px 18px;font-family:'Outfit';font-weight:900;font-size:16px;color:#6F4C9E;text-align:center;">$6,500</td><td style="padding:14px 18px;font-family:'Outfit';font-weight:900;font-size:16px;color:#6F4C9E;text-align:center;">$10,500</td><td style="padding:14px 18px;font-family:'Outfit';font-weight:900;font-size:16px;color:#6F4C9E;text-align:center;">$10,500</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p data-reveal="" style="font-size:16px;line-height:1.6;color:#4a3d58;margin:0 0 36px;"><strong style="color:#1B1124;">Total 6 meses (fee + pauta):</strong> $58,000 MXN.</p>
+
+          <h4 data-reveal="" style="font-family:'DM Sans';font-size:11.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#6F4C9E;margin:0 0 16px;">Condiciones de contratación</h4>
+          <ul data-reveal="" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:13px;max-width:800px;">
+            <li style="display:flex;gap:13px;align-items:flex-start;"><span style="width:7px;height:7px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15.5px;line-height:1.6;color:#4a3d58;">Contratación mínima de 6 meses, servicio mensual continuo. Precios sin IVA.</span></li>
+            <li style="display:flex;gap:13px;align-items:flex-start;"><span style="width:7px;height:7px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15.5px;line-height:1.6;color:#4a3d58;">La pauta no está incluida; el doctor define y controla el presupuesto ($1,500 en M1-2, $5,500 de M3 en adelante).</span></li>
+            <li style="display:flex;gap:13px;align-items:flex-start;"><span style="width:7px;height:7px;border-radius:9999px;background:#FD327B;margin-top:9px;flex:none;opacity:.85;"></span><span style="font-size:15.5px;line-height:1.6;color:#4a3d58;"><strong style="color:#1B1124;">Variable crítica:</strong> el tiempo de respuesta del consultorio a un WhatsApp. Si tarda más de 12 horas, ese paciente ya escribió a otra opción.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGUIENTES PASOS + FOOTER -->
+  <footer style="position:relative;background:#2E2340;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(520px 300px at 18% 8%,rgba(253,50,123,0.18),transparent 70%),radial-gradient(520px 320px at 88% 96%,rgba(95,207,250,0.14),transparent 70%);pointer-events:none;"></div>
+    <div style="position:relative;max-width:980px;margin:0 auto;padding:80px 24px 64px;">
+      <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono';font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#5FCFFA;margin-bottom:18px;"><span style="width:8px;height:8px;border-radius:9999px;background:#FD327B;box-shadow:0 0 12px 2px rgba(253,50,123,0.7);"></span>Siguientes pasos</div>
+      <h2 style="font-family:'Outfit';font-weight:900;font-size:clamp(28px,4vw,40px);line-height:1.08;letter-spacing:-0.02em;color:#fff;margin:0 0 36px;max-width:640px;">Tres pasos para <em style="font-style:normal;color:#FD327B;">arrancar</em>.</h2>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:48px;max-width:760px;">
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);">
+          <span style="width:34px;height:34px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex:none;">1</span>
+          <div><div style="font-family:'Outfit';font-weight:800;font-size:17px;color:#fff;margin-bottom:4px;">Confirmar el alcance</div><div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,0.7);">y aclarar dudas finales de la propuesta.</div></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);">
+          <span style="width:34px;height:34px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex:none;">2</span>
+          <div><div style="font-family:'Outfit';font-weight:800;font-size:17px;color:#fff;margin-bottom:4px;">Firmar y arrancar</div><div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,0.7);">contrato con BNI aplicado, contratación mínima de 6 meses.</div></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);">
+          <span style="width:34px;height:34px;border-radius:9999px;background:#FD327B;color:#fff;font-family:'Outfit';font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex:none;">3</span>
+          <div><div style="font-family:'Outfit';font-weight:800;font-size:17px;color:#fff;margin-bottom:4px;">Kickoff</div><div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,0.7);">60 minutos para alinear posicionamiento, paciente ideal por sistema y prioridades por sede. Empezamos Fase 0 en los siguientes 7 días.</div></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.10);">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <img src="assets/logo-aigenci-bco.png" alt="Aigenci" style="height:34px;width:auto;display:block;">
+          <div style="font-size:14px;color:rgba(255,255,255,0.7);">Preparado por <span style="color:#fff;font-weight:600;">Víctor Giorgana · Aigenci</span></div>
+        </div>
+        <a href="https://aigenci.mx" style="font-family:'JetBrains Mono';font-size:12px;color:#5FCFFA;text-decoration:none;letter-spacing:0.06em;">aigenci.mx →</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+function init(){
+const root = document.getElementById('report');
+    if (!root) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---- Collapsible sections ----
+    root.querySelectorAll('section[data-sec]').forEach((sec) => {
+      const btn = sec.querySelector('.sec-toggle');
+      const body = sec.querySelector('.sec-body');
+      const chev = sec.querySelector('.chev');
+      if (!btn || !body) return;
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') !== 'false';
+        const next = !open;
+        btn.setAttribute('aria-expanded', String(next));
+        if (next) {
+          body.style.gridTemplateRows = '1fr';
+          body.style.opacity = '1';
+          body.style.marginTop = '28px';
+          if (chev) chev.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.gridTemplateRows = '0fr';
+          body.style.opacity = '0';
+          body.style.marginTop = '0px';
+          if (chev) chev.style.transform = 'rotate(-90deg)';
+        }
+      });
+    });
+
+    // ---- Nav pills: scroll + auto-open ----
+    root.querySelectorAll('[data-nav]').forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const id = pill.getAttribute('data-nav');
+        const sec = document.getElementById(id);
+        if (!sec) return;
+        const btn = sec.querySelector('.sec-toggle');
+        if (btn && btn.getAttribute('aria-expanded') === 'false') btn.click();
+        sec.scrollIntoView ? null : null;
+        const y = sec.getBoundingClientRect().top + window.pageYOffset - 76;
+        window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+      });
+    });
+
+    // ---- Scrollspy ----
+    const pills = Array.from(root.querySelectorAll('[data-nav]'));
+    const setActive = (id) => {
+      pills.forEach((p) => {
+        const on = p.getAttribute('data-nav') === id;
+        p.style.background = on ? '#FD327B' : 'rgba(255,255,255,0.10)';
+        p.style.borderColor = on ? '#FD327B' : 'rgba(255,255,255,0.18)';
+        p.style.color = on ? '#fff' : 'rgba(255,255,255,0.7)';
+      });
+    };
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    root.querySelectorAll('section[data-sec]').forEach((s) => spy.observe(s));
+
+    // ---- Reveal on scroll ----
+    const revealEls = Array.from(root.querySelectorAll('[data-reveal]'));
+    const stagger = [0, 0.06, 0.14, 0.22, 0.30, 0.38, 0.46];
+    revealEls.forEach((el) => {
+      if (reduce) return;
+      const d = parseInt(el.getAttribute('data-d') || '0', 10);
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity .6s cubic-bezier(.22,1,.36,1) ' + (stagger[d] || 0) + 's, transform .6s cubic-bezier(.22,1,.36,1) ' + (stagger[d] || 0) + 's';
+    });
+    const rev = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          rev.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    if (!reduce) revealEls.forEach((el) => rev.observe(el));
+
+    // ---- Animated counters ----
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const animate = (el) => {
+      const target = parseFloat(el.getAttribute('data-count'));
+      const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      const prefix = el.getAttribute('data-prefix') || '';
+      if (reduce) {
+        el.textContent = prefix + (decimals ? target.toFixed(decimals) : Math.round(target).toLocaleString('en-US'));
+        return;
+      }
+      const dur = 1400; const start = performance.now();
+      const step = (now) => {
+        const t = Math.min(1, (now - start) / dur);
+        const v = target * ease(t);
+        el.textContent = prefix + (decimals ? v.toFixed(decimals) : Math.round(v).toLocaleString('en-US'));
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const counters = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { animate(e.target); counters.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    root.querySelectorAll('[data-count]').forEach((el) => counters.observe(el));
+
+    // ---- Sticker decorations ----
+    const shape = (k, c, s) => {
+      const sw = Math.max(2, s * 0.16);
+      if (k === 'sparkle') return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="' + c + '"><path d="M12 0c.6 5.4 3.4 8.4 12 12-8.6 3.6-11.4 6.6-12 12-.6-5.4-3.4-8.4-12-12C8.6 8.4 11.4 5.4 12 0z"/></svg>';
+      if (k === 'plus') return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="none" stroke="' + c + '" stroke-width="' + sw + '" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg>';
+      if (k === 'wave') return '<svg width="' + (s * 1.6) + '" height="' + (s * 0.6) + '" viewBox="0 0 48 18" fill="none" stroke="' + c + '" stroke-width="3.2" stroke-linecap="round"><path d="M2 9c5-9 11-9 16 0s11 9 16 0 11-9 12-4"/></svg>';
+      if (k === 'dot') return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="' + c + '"><circle cx="12" cy="12" r="11"/></svg>';
+      if (k === 'ring') return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="none" stroke="' + c + '" stroke-width="' + sw + '"><circle cx="12" cy="12" r="9"/></svg>';
+      return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="' + c + '"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.3l1.4-6.8L2.2 9.7l6.9-.7L12 2z"/></svg>';
+    };
+    const place = (host, defs, dark) => {
+      if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+      defs.forEach((d, i) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'aig-sticker';
+        wrap.style.cssText += d.pos;
+        wrap.style.opacity = String(d.o);
+        wrap.style.setProperty('--r', (d.rot || 0) + 'deg');
+        if (!reduce) {
+          const dur = (d.k === 'wave' ? 7 : 6);
+          wrap.style.animation = 'aig-' + (d.k === 'wave' ? 'floatX' : 'floatY') + ' ' + dur + 's ease-in-out ' + (-i * 1.7) + 's infinite';
+        } else {
+          wrap.style.transform = 'rotate(' + (d.rot || 0) + 'deg)';
+        }
+        wrap.innerHTML = shape(d.k, d.c, d.s);
+        host.appendChild(wrap);
+      });
+    };
+    // Hero — vibrant
+    const hero = root.querySelector('header');
+    if (hero) place(hero, [
+      { k: 'sparkle', c: '#5FCFFA', s: 30, o: 0.9, rot: 0, pos: 'top:74px;right:32%;' },
+      { k: 'plus', c: '#FD327B', s: 26, o: 0.85, rot: 0, pos: 'top:150px;right:8%;' },
+      { k: 'dot', c: '#FD327B', s: 12, o: 0.9, rot: 0, pos: 'bottom:150px;left:6%;' },
+      { k: 'ring', c: 'rgba(255,255,255,0.5)', s: 34, o: 0.6, rot: 0, pos: 'top:96px;left:3%;' },
+      { k: 'wave', c: 'rgba(95,207,250,0.7)', s: 30, o: 0.7, rot: 0, pos: 'bottom:170px;right:4%;' }
+    ], true);
+    // Footer — vibrant
+    const foot = root.querySelector('footer');
+    if (foot) place(foot, [
+      { k: 'sparkle', c: '#FD327B', s: 28, o: 0.85, rot: 0, pos: 'top:70px;right:7%;' },
+      { k: 'star', c: '#5FCFFA', s: 22, o: 0.8, rot: 12, pos: 'bottom:120px;left:5%;' },
+      { k: 'plus', c: 'rgba(255,255,255,0.6)', s: 22, o: 0.7, rot: 0, pos: 'top:180px;left:9%;' },
+      { k: 'dot', c: '#5FCFFA', s: 10, o: 0.9, rot: 0, pos: 'bottom:90px;right:12%;' }
+    ], true);
+    // Light sections — ghosted, alternating accents
+    const ghost = [
+      [{ k: 'sparkle', c: '#6F4C9E', s: 26, o: 0.16, pos: 'top:70px;right:4%;', rot: 0 }, { k: 'plus', c: '#FD327B', s: 22, o: 0.15, pos: 'bottom:90px;left:3%;', rot: 0 }],
+      [{ k: 'star', c: '#FD327B', s: 24, o: 0.15, pos: 'top:90px;left:4%;', rot: 10 }, { k: 'dot', c: '#5FCFFA', s: 14, o: 0.2, pos: 'bottom:120px;right:5%;', rot: 0 }],
+      [{ k: 'ring', c: '#6F4C9E', s: 30, o: 0.15, pos: 'top:80px;right:5%;', rot: 0 }, { k: 'wave', c: '#5FCFFA', s: 26, o: 0.18, pos: 'bottom:100px;left:4%;', rot: 0 }],
+      [{ k: 'plus', c: '#6F4C9E', s: 24, o: 0.15, pos: 'top:100px;left:3%;', rot: 0 }, { k: 'sparkle', c: '#FD327B', s: 22, o: 0.15, pos: 'bottom:110px;right:4%;', rot: 0 }],
+      [{ k: 'star', c: '#6F4C9E', s: 26, o: 0.15, pos: 'top:80px;right:4%;', rot: -8 }, { k: 'dot', c: '#FD327B', s: 12, o: 0.18, pos: 'bottom:130px;left:5%;', rot: 0 }],
+      [{ k: 'sparkle', c: '#5FCFFA', s: 26, o: 0.18, pos: 'top:90px;left:4%;', rot: 0 }, { k: 'plus', c: '#6F4C9E', s: 22, o: 0.15, pos: 'bottom:90px;right:5%;', rot: 0 }],
+      [{ k: 'ring', c: '#FD327B', s: 28, o: 0.15, pos: 'top:80px;right:5%;', rot: 0 }, { k: 'wave', c: '#6F4C9E', s: 26, o: 0.16, pos: 'bottom:110px;left:3%;', rot: 0 }]
+    ];
+    root.querySelectorAll('section[data-sec]').forEach((sec, i) => place(sec, ghost[i % ghost.length], false));
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+})();
+</script>
+</body>
+</html>
