@@ -713,6 +713,54 @@ const root = document.getElementById('report');
       [{ k: 'ring', c: '#FD327B', s: 28, o: 0.15, pos: 'top:80px;right:5%;', rot: 0 }, { k: 'wave', c: '#6F4C9E', s: 26, o: 0.16, pos: 'bottom:110px;left:3%;', rot: 0 }]
     ];
     root.querySelectorAll('section[data-sec]').forEach((sec, i) => place(sec, ghost[i % ghost.length], false));
+
+    // ---- Mobile: horizontal scroll on overflowing tables + visual hint ----
+    const tableWraps = Array.from(root.querySelectorAll('table')).map(t => t.parentElement).filter(w => w && w !== root && (w.style.borderRadius || w.style.overflow));
+    tableWraps.forEach(w => {
+      w.dataset.tableWrap = '1';
+      w.dataset.origOverflow = w.style.overflow || 'hidden';
+      // Wrap with a parent that hosts the gradient fade hint (so it survives the scroll)
+      const host = document.createElement('div');
+      host.dataset.tableHost = '1';
+      host.style.cssText = 'position:relative;';
+      w.parentNode.insertBefore(host, w);
+      host.appendChild(w);
+      const fade = document.createElement('div');
+      fade.dataset.tableFade = '1';
+      fade.style.cssText = 'position:absolute;top:0;right:0;bottom:0;width:36px;background:linear-gradient(to left,rgba(246,244,255,0.96),rgba(246,244,255,0));pointer-events:none;opacity:0;transition:opacity .25s;border-top-right-radius:28px;border-bottom-right-radius:28px;z-index:3;';
+      host.appendChild(fade);
+    });
+    const updateFades = () => {
+      const mobile = window.innerWidth <= 760;
+      tableWraps.forEach(w => {
+        const fade = w.parentNode.querySelector('[data-table-fade]');
+        if (!fade) return;
+        const hasOverflow = w.scrollWidth > w.clientWidth + 1;
+        const scrolledToEnd = w.scrollLeft + w.clientWidth >= w.scrollWidth - 2;
+        fade.style.opacity = (mobile && hasOverflow && !scrolledToEnd) ? '1' : '0';
+      });
+    };
+    const applyTableScroll = () => {
+      const mobile = window.innerWidth <= 760;
+      tableWraps.forEach(w => {
+        if (mobile) {
+          w.style.overflow = '';
+          w.style.overflowX = 'auto';
+          w.style.overflowY = 'hidden';
+          w.style.webkitOverflowScrolling = 'touch';
+        } else {
+          w.style.overflow = w.dataset.origOverflow;
+          w.style.overflowX = '';
+          w.style.overflowY = '';
+          w.style.webkitOverflowScrolling = '';
+        }
+      });
+      updateFades();
+    };
+    applyTableScroll();
+    tableWraps.forEach(w => w.addEventListener('scroll', updateFades, { passive: true }));
+    let resizeTimer;
+    window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(applyTableScroll, 120); });
 }
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
